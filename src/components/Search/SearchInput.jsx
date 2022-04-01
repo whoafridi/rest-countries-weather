@@ -1,11 +1,11 @@
 import React, { useState } from "react";
+import Button from "@mui/material/Button";
 
 const SearchInput = ({ onSearch }) => {
   const [input, setInput] = useState("");
 
   const submitHandler = (e) => {
     e.preventDefault();
-
     onSearch(input);
   };
 
@@ -17,7 +17,14 @@ const SearchInput = ({ onSearch }) => {
         value={input}
         onChange={(e) => setInput(e.target.value)}
       />
-      <input type="submit" style={{margin:5}} />
+      <Button
+        variant="contained"
+        type="submit"
+        style={{ margin: 5 }}
+        disabled={!input}
+      >
+        Search
+      </Button>
     </form>
   );
 };

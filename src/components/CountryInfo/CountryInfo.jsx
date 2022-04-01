@@ -30,6 +30,7 @@ const CountryInfo = () => {
     getCountryByName();
   }, []);
   console.log(weather);
+
   return (
     <div className="country__info__wrapper">
       <button>

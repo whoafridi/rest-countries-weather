@@ -1,3 +1,4 @@
+import { Button } from "@mui/material";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import SearchInput from "../Search/SearchInput";
@@ -52,9 +53,9 @@ const AllCountries = () => {
               </h6>
               <h6>Latitude: {country.latlng[0]}</h6>
               <h6>Longitude: {country.latlng[1]}</h6>
-              <button>
-              <Link to={`/${country.capital}`}>Weather info</Link>
-              </button>
+              <Button variant="contained" size="small">
+                <Link to={`/${country.capital}`}>Weather info</Link>
+              </Button>
             </div>
           </div>
         ))}
